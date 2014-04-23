@@ -242,6 +242,9 @@ let ParentPackage = InsecureAPI in {
   def UncheckedReturn : Checker<"UncheckedReturn">,
     HelpText<"Warn on uses of functions whose return values must be always checked">,
     DescFile<"CheckSecuritySyntaxOnly.cpp">;
+  def NegativeArrayIndexAssignmentChecker : Checker<"NegativeArrayIndexAssignmentChecker">,
+    HelpText<"Warn on assignments involving an array indexed by a negative value">,
+    DescFile<"NegativeArrayIndexAssignmentChecker.cpp">;
 }
 let ParentPackage = Security in {
   def FloatLoopCounter : Checker<"FloatLoopCounter">,
